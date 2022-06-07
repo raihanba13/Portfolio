@@ -1,0 +1,5 @@
+.metadata/
+*othersCode/
+secrets/
+*.pyc
+*.exe

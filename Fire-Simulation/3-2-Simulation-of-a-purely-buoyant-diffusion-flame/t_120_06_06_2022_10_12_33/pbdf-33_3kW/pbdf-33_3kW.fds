@@ -1,0 +1,84 @@
+"--------------------------------------------------------------------------------------------"
+"Output files will be tagged with CHID, i.e., 'pool_fire', 'TITLE' is just an description"
+"--------------------------------------------------------------------------------------------"
+&HEAD CHID = 'pbdf-33_3kW', TITLE = 'Purely buoyant diffusion flame-33_3kW'  /
+
+"--------------------------------------------------------------------------------------------"
+"Mesh with 25/25/50 cells in X/Y/Z axes that extends from X/Y/Z = -2.5/-2.5/0 to 2.5/2.5/10 m"
+"--------------------------------------------------------------------------------------------"
+&MESH IJK = 25,25,70, XB = -0.75,0.75, -0.75,0.75, -0.72,3.48 /
+
+"--------------------------------------------------------------------------------------------"
+"End of simulation time is 30 s"
+"--------------------------------------------------------------------------------------------"
+&TIME T_END = 120 / End of simulation time is 30 s
+&DUMP NFRAMES=90 /
+
+"--------------------------------------------------------------------------------------------"
+"Specifying FDS default fuel 'METHANE' for the reaction"
+"--------------------------------------------------------------------------------------------"
+&REAC FUEL = 'METHANE' /
+
+"--------------------------------------------------------------------------------------------"
+"Surface 'BURNER' with a heat release rate of 1000 kW/m^2"
+"--------------------------------------------------------------------------------------------"
+&OBST XB= -0.15, 0.15, -0.15, 0.15, -0.72, 0, COLOR='RED' /
+&SURF ID = 'BURNER', HRRPUA =370.0, COLOR = 'RASPBERRY' / Surface with ID /
+
+"--------------------------------------------------------------------------------------------"
+"Vent in the X-Y plane at Z = 0 that extends from X/Y = -0.5/-0.5 to 0.5/0.5"
+"Surface 'BURNER' is assigned to the vent"
+"--------------------------------------------------------------------------------------------"
+&VENT XB = -.15, .15, -.15, .15, 0, 0, SURF_ID='BURNER'/
+
+"--------------------------------------------------------------------------------------------"
+"Slice file in the Y-Z plane at X = 0 with quantity 'temperature'"
+"CELL_CENTERED prevents FDS from interpolating the results to the cell corners"
+"--------------------------------------------------------------------------------------------"
+&SLCF PBX = 0, QUANTITY = 'TEMPERATURE', CELL_CENTERED = .TRUE. /
+&SLCF PBY = 0, QUANTITY = 'VELOCITY', VECTOR = .TRUE. /
+
+"Device Info starts here"
+                &DEVC XYZ=0,0,.03, QUANTITY='TEMPERATURE', ID='T-1' /
+                &DEVC XYZ=0,0,.03, QUANTITY='VELOCITY', ID='V-1' /
+                &DEVC XYZ=0,0,0.09, QUANTITY='TEMPERATURE', ID='T-2' /
+                &DEVC XYZ=0,0,0.09, QUANTITY='VELOCITY', ID='V-2' /
+                &DEVC XYZ=0,0,0.15, QUANTITY='TEMPERATURE', ID='T-3' /
+                &DEVC XYZ=0,0,0.15, QUANTITY='VELOCITY', ID='V-3' /
+                &DEVC XYZ=0,0,0.21, QUANTITY='TEMPERATURE', ID='T-4' /
+                &DEVC XYZ=0,0,0.21, QUANTITY='VELOCITY', ID='V-4' /
+                &DEVC XYZ=0,0,0.27, QUANTITY='TEMPERATURE', ID='T-5' /
+                &DEVC XYZ=0,0,0.27, QUANTITY='VELOCITY', ID='V-5' /
+                &DEVC XYZ=0,0,0.33, QUANTITY='TEMPERATURE', ID='T-6' /
+                &DEVC XYZ=0,0,0.33, QUANTITY='VELOCITY', ID='V-6' /
+                &DEVC XYZ=0,0,0.39, QUANTITY='TEMPERATURE', ID='T-7' /
+                &DEVC XYZ=0,0,0.39, QUANTITY='VELOCITY', ID='V-7' /
+                &DEVC XYZ=0,0,0.45, QUANTITY='TEMPERATURE', ID='T-8' /
+                &DEVC XYZ=0,0,0.45, QUANTITY='VELOCITY', ID='V-8' /
+                &DEVC XYZ=0,0,0.51, QUANTITY='TEMPERATURE', ID='T-9' /
+                &DEVC XYZ=0,0,0.51, QUANTITY='VELOCITY', ID='V-9' /
+                &DEVC XYZ=0,0,0.57, QUANTITY='TEMPERATURE', ID='T-10' /
+                &DEVC XYZ=0,0,0.57, QUANTITY='VELOCITY', ID='V-10' /
+                &DEVC XYZ=0,0,0.63, QUANTITY='TEMPERATURE', ID='T-11' /
+                &DEVC XYZ=0,0,0.63, QUANTITY='VELOCITY', ID='V-11' /
+                &DEVC XYZ=0,0,0.69, QUANTITY='TEMPERATURE', ID='T-12' /
+                &DEVC XYZ=0,0,0.69, QUANTITY='VELOCITY', ID='V-12' /
+                &DEVC XYZ=0,0,0.75, QUANTITY='TEMPERATURE', ID='T-13' /
+                &DEVC XYZ=0,0,0.75, QUANTITY='VELOCITY', ID='V-13' /
+                &DEVC XYZ=0,0,0.81, QUANTITY='TEMPERATURE', ID='T-14' /
+                &DEVC XYZ=0,0,0.81, QUANTITY='VELOCITY', ID='V-14' /
+                &DEVC XYZ=0,0,0.87, QUANTITY='TEMPERATURE', ID='T-15' /
+                &DEVC XYZ=0,0,0.87, QUANTITY='VELOCITY', ID='V-15' /
+                &DEVC XYZ=0,0,0.93, QUANTITY='TEMPERATURE', ID='T-16' /
+                &DEVC XYZ=0,0,0.93, QUANTITY='VELOCITY', ID='V-16' /
+                &DEVC XYZ=0,0,0.99, QUANTITY='TEMPERATURE', ID='T-17' /
+                &DEVC XYZ=0,0,0.99, QUANTITY='VELOCITY', ID='V-17' /
+"Device Info ends here"
+
+"Open Vent starts here"
+"Open Vent ends here"
+
+"--------------------------------------------------------------------------------------------"
+"FDS does not look after this line"
+"--------------------------------------------------------------------------------------------"
+&TAIL /
