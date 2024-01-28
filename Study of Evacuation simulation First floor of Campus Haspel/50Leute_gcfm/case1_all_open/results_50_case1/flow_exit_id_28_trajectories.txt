@@ -1,0 +1,7 @@
+#Simulation time: 31.67
+#Flow at exit Hoersaal( ID 28 )
+#Time (s), cummulative number of agents, pedestrian ID
+
+2.355769230769231 1 66
+3.557692307692308 2 63
+

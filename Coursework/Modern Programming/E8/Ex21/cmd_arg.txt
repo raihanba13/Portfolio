@@ -1,0 +1,2 @@
+g++ -std=c++17 -o encrypter file_encrypter.cpp; ./encrypter en 12345 input.txt encfile.dat
+g++ -std=c++17 -o encrypter file_encrypter.cpp; ./encrypter de 12345 encfile.dat source.txt

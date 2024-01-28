@@ -1,0 +1,6 @@
+department : Abteilung Fachbereich
+faculty : Fachbereich Fakultät
+pupil : Schüler
+school : Hochschule Schule
+student : Schüler Student
+university : Hochschule Universität

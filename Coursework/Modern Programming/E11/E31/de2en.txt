@@ -1,0 +1,8 @@
+Abteilung : department
+Fachbereich : faculty
+Fakultät : faculty
+Hochschule : university
+Schule : school
+Schüler : student
+Student : student
+Universität : university

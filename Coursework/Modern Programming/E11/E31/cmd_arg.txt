@@ -1,0 +1,1 @@
+clear; make; ./output en2de.txt de2en.txt

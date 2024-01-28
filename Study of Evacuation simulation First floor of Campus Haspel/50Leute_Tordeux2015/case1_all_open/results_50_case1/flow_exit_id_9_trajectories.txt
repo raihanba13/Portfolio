@@ -1,0 +1,8 @@
+#Simulation time: 22.50
+#Flow at exit GM( ID 9 )
+#Time (s), cummulative number of agents, pedestrian ID
+
+1.9583333333333333 1 56
+2.375 2 55
+3.6666666666666665 3 54
+

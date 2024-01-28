@@ -1,0 +1,6 @@
+#Simulation time: 31.67
+#Flow at exit mensa( ID 2 )
+#Time (s), cummulative number of agents, pedestrian ID
+
+1.951923076923077 1 85
+

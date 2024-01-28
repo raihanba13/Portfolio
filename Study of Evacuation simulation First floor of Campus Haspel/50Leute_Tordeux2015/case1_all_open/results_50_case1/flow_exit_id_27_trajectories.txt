@@ -1,0 +1,8 @@
+#Simulation time: 22.50
+#Flow at exit Ausstellung - Veranstaltung( ID 27 )
+#Time (s), cummulative number of agents, pedestrian ID
+
+3.25 1 66
+5.333333333333333 2 63
+10.875 3 85
+

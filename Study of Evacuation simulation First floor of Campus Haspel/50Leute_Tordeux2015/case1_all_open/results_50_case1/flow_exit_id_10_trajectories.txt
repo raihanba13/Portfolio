@@ -1,0 +1,7 @@
+#Simulation time: 22.50
+#Flow at exit Flur( ID 10 )
+#Time (s), cummulative number of agents, pedestrian ID
+
+9 1 52
+10.625 2 53
+

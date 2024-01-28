@@ -1,0 +1,83 @@
+&HEAD CHID='fw25vox_460dom' TITLE='fw25v460d' /
+&TIME T_END=30.0 /
+&REAC FUEL='N-HEPTANE'/
+      HEAT_OF_COMBUSTION=4817.0 /
+
+--- Computational domain | MPI Processes: 1 | MESH Qty: 1 | Cell Qty: 209760
+
+-- MPI Process: <0> | MESH Qty: 1 | Cell Qty: 209760
+Cell Qty: 209760 | Size: 0.050·0.030·0.050m | Aspect: 1.7 | Poisson: No
+&MESH ID='Domain' IJK=92,57,40 XB=0.000,4.600,-0.850,0.850,0.000,2.000
+      MPI_PROCESS=0 /
+
+--- Vent
+
+&VENT XB = 4.6,4.6,-0.50,0.50,0.0,2.0, SURF_ID='supply', /
+&SURF ID='supply',VEL = -0.49, COLOR='GREEN' /
+
+--- Geometric namelists from Blender Collections
+
+## Domain boundary conditions
+&VENT MB = 'ZMAX' SURF_ID = 'OPEN' /
+&VENT MB = 'XMIN' SURF_ID = 'OPEN' /
+
+&SURF ID='line_burner_0', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_1', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_2', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_3', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_4', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_5', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_6', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_7', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_8', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_9', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_10', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_11', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_12', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_13', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_14', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_15', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_16', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_17', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_18', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_19', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_20', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_21', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_22', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_23', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='line_burner_24', HRRPUA=800., COLOR = 'MELON' /
+&SURF ID='sand_bed',ROUGHNESS= 0.01,NO_SLIP=T,COLOR = 'SANDY BROWN ' /
+
+XB Voxels: 25 | Resolution: 0.030 m
+&OBST  XB=2.715,2.745,0.345,0.375,0.060,0.090 SURF_ID = 'line_burner_0'/
+&OBST  XB=2.625,2.745,0.315,0.345,0.060,0.090 SURF_ID = 'line_burner_1'/
+&OBST  XB=2.565,2.685,0.285,0.315,0.060,0.090 SURF_ID = 'line_burner_2'/
+&OBST  XB=2.475,2.625,0.255,0.285,0.060,0.090 SURF_ID = 'line_burner_3'/
+&OBST  XB=2.385,2.535,0.225,0.255,0.060,0.090 SURF_ID = 'line_burner_4'/
+&OBST  XB=2.295,2.445,0.195,0.225,0.060,0.090 SURF_ID = 'line_burner_5'/
+&OBST  XB=2.235,2.355,0.165,0.195,0.060,0.090 SURF_ID = 'line_burner_6'/
+&OBST  XB=2.145,2.295,0.135,0.165,0.060,0.090 SURF_ID = 'line_burner_7'/
+&OBST  XB=2.055,2.205,0.105,0.135,0.060,0.090 SURF_ID = 'line_burner_8'/
+&OBST  XB=1.965,2.115,0.075,0.105,0.060,0.090 SURF_ID = 'line_burner_9'/
+&OBST  XB=1.905,2.025,0.045,0.075,0.060,0.090 SURF_ID = 'line_burner_10'/
+&OBST  XB=1.815,1.965,0.015,0.045,0.060,0.090 SURF_ID = 'line_burner_11'/
+&OBST  XB=1.725,1.875,-0.015,0.015,0.060,0.090 SURF_ID = 'line_burner_12'/
+&OBST  XB=1.635,1.785,-0.045,-0.015,0.060,0.090 SURF_ID = 'line_burner_13'/
+&OBST  XB=1.575,1.695,-0.075,-0.045,0.060,0.090 SURF_ID = 'line_burner_14'/
+&OBST  XB=1.485,1.635,-0.105,-0.075,0.060,0.090 SURF_ID = 'line_burner_15'/
+&OBST  XB=1.395,1.545,-0.135,-0.105,0.060,0.090 SURF_ID = 'line_burner_16'/
+&OBST  XB=1.305,1.455,-0.165,-0.135,0.060,0.090 SURF_ID = 'line_burner_17'/
+&OBST  XB=1.245,1.365,-0.195,-0.165,0.060,0.090 SURF_ID = 'line_burner_18'/
+&OBST  XB=1.155,1.305,-0.225,-0.195,0.060,0.090 SURF_ID = 'line_burner_19'/
+&OBST  XB=1.065,1.215,-0.255,-0.225,0.060,0.090 SURF_ID = 'line_burner_20'/
+&OBST  XB=0.975,1.125,-0.285,-0.255,0.060,0.090 SURF_ID = 'line_burner_21'/
+&OBST  XB=0.915,1.035,-0.315,-0.285,0.060,0.090 SURF_ID = 'line_burner_22'/
+&OBST  XB=0.855,0.975,-0.345,-0.315,0.060,0.090 SURF_ID = 'line_burner_23'/
+&OBST  XB=0.855,0.885,-0.375,-0.345,0.060,0.090 SURF_ID = 'line_burner_24'/
+&OBST  XB=0.000,3.600,-0.850,0.850,0.000,0.050 SURF_ID = 'sand_bed'/
+
+&SLCF PBX = 1, QUANTITY = 'TEMPERATURE', CELL_CENTERED = .TRUE. /
+&SLCF PBY = 1, QUANTITY = 'TEMPERATURE', CELL_CENTERED = .TRUE. /
+&SLCF PBX = 4, QUANTITY = 'VELOCITY', CELL_CENTERED = .TRUE. /
+
+&TAIL /
